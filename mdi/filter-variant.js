@@ -1,0 +1,15 @@
+
+let React = require('react');
+let IconBase = require('react-icon-base');
+
+export default class MdiFilterVariant extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 24.00 24.00" {...this.props}>
+                <g>
+	<path stroke-linejoin="round" d="M 6,13L 18,13L 18,11L 6,11M 3,6L 3,8L 21,8L 21,6M 10,18L 14,18L 14,16L 10,16L 10,18 Z "/>
+</g>
+            </IconBase>
+        );
+    }
+}
