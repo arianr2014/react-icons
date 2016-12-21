@@ -13,6 +13,13 @@ module.exports = {
         licence: "CC-BY 4.0",
         licenceUrl: "https://github.com/google/material-design-icons/blob/master/LICENSE"
     },
+    mdi: {
+        name: "Material Design Icons",
+        url: "https://materialdesignicons.com/",
+        attribution: "Material Design Icons by @templarian https://github.com/templarian/MaterialDesign/",
+        licence: "WTFPL",
+        licenceUrl: "https://github.com/Templarian/MaterialDesign/blob/master/license.txt"
+    },
     ti: {
         name: "Typicons",
         url: "http://typicons.com/",
