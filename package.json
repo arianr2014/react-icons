@@ -1,11 +1,12 @@
 {
-  "name": "react-icons",
+  "name": "react-icons2",
   "version": "2.2.1",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "scripts": {
     "docs": "babel-node ./bin/generate-docs",
     "build": "node ./bin/create | xargs babel --out-dir lib",
     "prepublish": "npm run build",
+    "release": "npm run build && npm publish lib",
     "eslint": "eslint ."
   },
   "repository": {
