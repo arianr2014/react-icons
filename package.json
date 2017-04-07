@@ -1,12 +1,12 @@
 {
   "name": "react-icons2",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "scripts": {
     "docs": "babel-node ./bin/generate-docs",
-    "build": "node ./bin/create | xargs babel --out-dir lib",
-    "prepublish": "npm run build",
-    "release": "npm run build && npm publish lib",
+    "release": "DEBUG=0 npm run build && npm publish dist",
+    "build": "rm -rf dist && npm run create-es6 && mkdir dist && cp {package.json,yarn.lock,README.md} dist/ && babel es6 --out-dir dist --source-maps inline --copy-files",
+    "create-es6": "rm -rf es6 && mkdir es6 && node ./bin/create && cp IconBase.js es6/IconBase.js",
     "eslint": "eslint ."
   },
   "repository": {
