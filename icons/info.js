@@ -40,5 +40,12 @@ module.exports = {
         attribution: "The premium icon font for Ionic Framework.",
         licence: "MIT",
         licenceUrl: "https://github.com/driftyco/ionicons/blob/master/LICENSE",
+    },
+    is: {
+        name: "Igor Suvorov",
+        url: "http://isuvorov.ru/",
+        attribution: "The premium icon pack for Russian users.",
+        licence: "MIT",
+        licenceUrl: "https://github.com/isuvorov",
     }
 }
