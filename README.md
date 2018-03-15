@@ -1,4 +1,6 @@
 
+## not maintained anymore
+
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="60" alt="React Icons">
 
 ## [React Icons](http://gorangajic.github.io/react-icons/index.html)
@@ -17,7 +19,7 @@ Include popular icons in your React projects easly with ```react-icons```, which
 
 
 ```javascript
-import FaBeer from 'react-icons/fa/beer';
+import FaBeer from 'react-icons/lib/fa/beer';
 
 class Question extends React.Component {
     render() {
@@ -46,7 +48,13 @@ You can include icons directly from ```react-icons``` using ```import FaBeer fro
 Also it's possible to include the whole icon pack from:
 
 ```javascript
-import * as FontAwesome from 'react-icons/fa'
+import * as FontAwesome from 'react-icons/lib/fa'
+
+class Question extends React.Component {
+    render() {
+        return <h3> Lets go for a <FontAwesome.FaBeer />? </h3>
+    }
+}
 ```
 
 or import multiple icons from the same pack
@@ -63,13 +71,15 @@ every icon pack is in their own folder
 
 to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
+Also, to view and search for the necessary icons you can use the tool [Icon Viewer](https://andy-pro.github.io/icon-viewer).
+
 ### Icons
 
 Currently supported icons are:
 * Material Design Icons by Google https://www.google.com/design/icons/ (licence: [CC-BY 4.0](https://github.com/google/material-design-icons/blob/master/LICENSE))
 * Font Awesome by Dave Gandy - http://fontawesome.io (licence: [SIL OFL 1.1](http://scripts.sil.org/OFL))
 * Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
-* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt)
+* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt))
 * Ionicons by Ionic Framework - http://ionicons.com (licence: [MIT](https://github.com/driftyco/ionicons/blob/master/LICENSE))
 
 You can add more icons by submitting pull requests or creating issues.
@@ -118,6 +128,15 @@ Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
 ### Why es6 import and not fonts?
 
 With ```react-icons```, you can send icons that are specified instead of one big font file to the users, helping you to recognize which icons are used in your project.
+
+### Using `create-react-app`?
+
+`create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
+
+```javascript
+import FaBeer from 'react-icons/lib/fa/beer';
+```
+
 ## Related
 
 - [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
